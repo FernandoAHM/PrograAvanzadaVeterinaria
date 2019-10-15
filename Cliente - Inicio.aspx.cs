@@ -13,5 +13,24 @@ namespace Cliente
         {
 
         }
+
+
+        // Inicio PLANTILLA
+        protected void lnkReserva_Hora(object sender, EventArgs e)
+        {
+            Response.Redirect("Cliente - Reserva Nueva.aspx");
+        }
+
+        protected void lnkInicio(object sender, EventArgs e)
+        {
+            Response.Redirect("Cliente - Inicio.aspx");
+        }
+        protected void lnkMi_mmascota(object sender, EventArgs e)
+        {
+            Response.Redirect("Cliente - Mascota Listado.aspx");
+        }
+
+        // FIN  PLANTILLA
+
     }
 }

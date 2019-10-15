@@ -32,9 +32,9 @@
                     <asp:Image runat="server" AlternateText="Imagen?" ></asp:Image>
                 </asp:TableCell>
                 <asp:TableCell Style="width:20%">
-                    <asp:Button ID="reservar_hora" runat="server" Text="Reservar Hora" Style="width:100%;padding:8px"/>
+                    <asp:Button ID="reservar_hora" runat="server" Text="Reservar Hora" Style="width:100%;padding:8px" OnClick="lnkReserva_Hora" />
                     <br/>
-                    <asp:Button ID="mi_mascota" runat="server" Text="Mi mascota" Style="width:100%;padding:8px"/>
+                    <asp:Button ID="mi_mascota" runat="server" Text="Mi mascota" Style="width:100%;padding:8px" />
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
