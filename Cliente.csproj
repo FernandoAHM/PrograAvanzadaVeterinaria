@@ -44,6 +44,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -53,6 +60,12 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -67,95 +80,105 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Base.aspx" />
-    <Content Include="Cliente - Mascota Derivacion.aspx" />
-    <Content Include="Cliente - Mascota Detalle.aspx" />
-    <Content Include="Cliente - Mascota Historial.aspx" />
-    <Content Include="Cliente - Mascota Receta.aspx" />
-    <Content Include="Cliente - Reserva Confirmacion.aspx" />
-    <Content Include="Cliente - Mascota Listado.aspx" />
-    <Content Include="Cliente - Reserva Pago.aspx" />
-    <Content Include="Cliente - Reservas Visualizacion.aspx" />
-    <Content Include="Cliente - Inicio.aspx" />
-    <Content Include="Cliente - Reserva Nueva.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Vistas\Base.aspx" />
+    <Content Include="Vistas\Cliente - Mascota Derivacion.aspx" />
+    <Content Include="Vistas\Cliente - Mascota Detalle.aspx" />
+    <Content Include="Vistas\Cliente - Mascota Historial.aspx" />
+    <Content Include="Vistas\Cliente - Mascota Receta.aspx" />
+    <Content Include="Vistas\Cliente - Reserva Confirmacion.aspx" />
+    <Content Include="Vistas\Cliente - Mascota Listado.aspx" />
+    <Content Include="Vistas\Cliente - Reserva Pago.aspx" />
+    <Content Include="Vistas\Cliente - Reservas Visualizacion.aspx" />
+    <Content Include="Vistas\Cliente - Inicio.aspx" />
+    <Content Include="Vistas\Cliente - Reserva Nueva.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base.aspx.cs">
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="source\Historial.cs" />
+    <Compile Include="source\Mascota.cs" />
+    <Compile Include="source\Derivacion.cs" />
+    <Compile Include="source\Cliente.cs" />
+    <Compile Include="source\Receta.cs" />
+    <Compile Include="source\Reserva.cs" />
+    <Compile Include="Vistas\Base.aspx.cs">
       <DependentUpon>Base.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Base.aspx.designer.cs">
+    <Compile Include="Vistas\Base.aspx.designer.cs">
       <DependentUpon>Base.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cliente - Mascota Derivacion.aspx.cs">
+    <Compile Include="Vistas\Cliente - Mascota Derivacion.aspx.cs">
       <DependentUpon>Cliente - Mascota Derivacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cliente - Mascota Derivacion.aspx.designer.cs">
+    <Compile Include="Vistas\Cliente - Mascota Derivacion.aspx.designer.cs">
       <DependentUpon>Cliente - Mascota Derivacion.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cliente - Mascota Detalle.aspx.cs">
+    <Compile Include="Vistas\Cliente - Mascota Detalle.aspx.cs">
       <DependentUpon>Cliente - Mascota Detalle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cliente - Mascota Detalle.aspx.designer.cs">
+    <Compile Include="Vistas\Cliente - Mascota Detalle.aspx.designer.cs">
       <DependentUpon>Cliente - Mascota Detalle.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cliente - Mascota Historial.aspx.cs">
+    <Compile Include="Vistas\Cliente - Mascota Historial.aspx.cs">
       <DependentUpon>Cliente - Mascota Historial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cliente - Mascota Historial.aspx.designer.cs">
+    <Compile Include="Vistas\Cliente - Mascota Historial.aspx.designer.cs">
       <DependentUpon>Cliente - Mascota Historial.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cliente - Mascota Receta.aspx.cs">
+    <Compile Include="Vistas\Cliente - Mascota Receta.aspx.cs">
       <DependentUpon>Cliente - Mascota Receta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cliente - Mascota Receta.aspx.designer.cs">
+    <Compile Include="Vistas\Cliente - Mascota Receta.aspx.designer.cs">
       <DependentUpon>Cliente - Mascota Receta.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cliente - Reserva Confirmacion.aspx.cs">
+    <Compile Include="Vistas\Cliente - Reserva Confirmacion.aspx.cs">
       <DependentUpon>Cliente - Reserva Confirmacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cliente - Reserva Confirmacion.aspx.designer.cs">
+    <Compile Include="Vistas\Cliente - Reserva Confirmacion.aspx.designer.cs">
       <DependentUpon>Cliente - Reserva Confirmacion.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cliente - Mascota Listado.aspx.cs">
+    <Compile Include="Vistas\Cliente - Mascota Listado.aspx.cs">
       <DependentUpon>Cliente - Mascota Listado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cliente - Mascota Listado.aspx.designer.cs">
+    <Compile Include="Vistas\Cliente - Mascota Listado.aspx.designer.cs">
       <DependentUpon>Cliente - Mascota Listado.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cliente - Reserva Pago.aspx.cs">
+    <Compile Include="Vistas\Cliente - Reserva Pago.aspx.cs">
       <DependentUpon>Cliente - Reserva Pago.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cliente - Reserva Pago.aspx.designer.cs">
+    <Compile Include="Vistas\Cliente - Reserva Pago.aspx.designer.cs">
       <DependentUpon>Cliente - Reserva Pago.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cliente - Reservas Visualizacion.aspx.cs">
+    <Compile Include="Vistas\Cliente - Reservas Visualizacion.aspx.cs">
       <DependentUpon>Cliente - Reservas Visualizacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cliente - Reservas Visualizacion.aspx.designer.cs">
+    <Compile Include="Vistas\Cliente - Reservas Visualizacion.aspx.designer.cs">
       <DependentUpon>Cliente - Reservas Visualizacion.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cliente - Inicio.aspx.cs">
+    <Compile Include="Vistas\Cliente - Inicio.aspx.cs">
       <DependentUpon>Cliente - Inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cliente - Inicio.aspx.designer.cs">
+    <Compile Include="Vistas\Cliente - Inicio.aspx.designer.cs">
       <DependentUpon>Cliente - Inicio.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cliente - Reserva Nueva.aspx.cs">
+    <Compile Include="Vistas\Cliente - Reserva Nueva.aspx.cs">
       <DependentUpon>Cliente - Reserva Nueva.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cliente - Reserva Nueva.aspx.designer.cs">
+    <Compile Include="Vistas\Cliente - Reserva Nueva.aspx.designer.cs">
       <DependentUpon>Cliente - Reserva Nueva.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -169,6 +192,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
