@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cliente - Mascota Historial.aspx.cs" Inherits="Cliente.Cliente___Mascota_Historial" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin-ModificarCliente.aspx.cs" Inherits="Cliente.Admin_ModificarCliente" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%; width: 100%; margin: 0;">
@@ -34,58 +34,39 @@
                     <asp:Image runat="server" AlternateText="Imagen?" ></asp:Image>
                 </asp:TableCell>
                 <asp:TableCell Style="width: 20%">
-                    <asp:Button ID="reservar_hora" runat="server" Text="Reservar Hora" Style="width: 100%; padding: 8px" />
+                    <asp:Button ID="btnGestionPersonal" runat="server" Text="Gestión Personal" Style="width: 100%; padding: 8px" />
                     <br />
-                    <asp:Button ID="mi_mascota" runat="server" Text="Mi mascota" Style="width: 100%; padding: 8px" />
+                    <asp:Button ID="btnGestionClientes" runat="server" Text="Gestión clientes" Style="width: 100%; padding: 8px"  OnClick="menu2_Click"/>
+                    <br />
+                    <asp:Button ID="btnSistema" runat="server" Text="Sistema" Style="width: 100%; padding: 8px" onClick="menu3_Click"/>
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
         <hr />
         <%--    NECK--%>
-        <%--    EDITALBE--%>
+
 
         <div id="editable" style="background-color: aqua; height: 58%">
 
-            <asp:Table ID="Table2" runat="server" style="width:70%;margin-left:10%;background-color:yellowgreen;height:100%">
-                <asp:TableRow>
 
-                    <asp:TableCell style="text-align: center;vertical-align:super">
-                    
-              <h2 style="margin-left: 15%">
+            <h2 style="margin-left: 15%">
                 
-                Historial Veterinario <br/>
-                  Nombre Mascota
+                Modificar Cliente
+
             </h2>
-                        Seleccione atención
-                        <br/>
-                        <asp:DropDownList ID="ddlHistorial" runat="server"/>
-                     
 
-
-                    </asp:TableCell>
-
-                    <asp:TableCell>
-
-                        <asp:Button ID="Button3" runat="server" Text="Ver historial" OnClick="lnkHistorial" Style="padding: 10%; width: 100%" />
-                        <br />
-                        <asp:Button ID="Button1" runat="server" Text="Ver receta" OnClick="lnkReceta" Style="padding: 10%; width: 100%" />
-                        <br />
-                        <asp:Button ID="Button2" runat="server" Text="Derivacion" OnClick="lnkDerivacion" Style="padding: 10%; width: 100%" />
-                        <br />
-                        <asp:Button ID="Button4" runat="server" Text="Volver" OnClick="lnkInicio" Style="padding: 10%; width: 100%" />
-                        <br />
-                    </asp:TableCell>
-                </asp:TableRow>
-
-
-            </asp:Table>
-
-
-
-
+            <p style="margin-left: 10%">
+                <input id="txtNombre" type="text" placeholder="Nombre"/><br />
+                    <input id="txtRut" type="text" placeholder="RUT"/><br />
+                    <asp:DropDownList ID="ddComuna" runat="server"></asp:DropDownList><br />
+                    <input id="txtDireccion" type="text" placeholder="Direccion" /><br />
+                    <input id="txtCorreo" type="text" placeholder="Correo" /><br />
+                    <input id="txtPass" type="text" placeholder="Contrasena"/><br />
+                <asp:Button ID="btnModificar" runat="server" Text="Guardar cambios" />  <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" /><br /><br />
+             
+            </p>
         </div>
 
-        <%--    ///EDITALBE--%>
 
         <%--    FOOTER    --%>
         <hr />
@@ -106,3 +87,4 @@
 
 </body>
 </html>
+

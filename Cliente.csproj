@@ -80,7 +80,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Global.asax" />
+    <Content Include="Vistas\Admin - DetallesCliente.aspx" />
+    <Content Include="Vistas\Admin-AgregarMascota.aspx" />
+    <Content Include="Vistas\Admin-IndexGestionClientes.aspx" />
+    <Content Include="Vistas\Admin-ModificarCliente.aspx" />
+    <Content Include="Vistas\Admin-ModificarMascota.aspx" />
+    <Content Include="Vistas\Admin-Sistema.aspx" />
     <Content Include="Vistas\Base.aspx" />
     <Content Include="Vistas\Cliente - Mascota Derivacion.aspx" />
     <Content Include="Vistas\Cliente - Mascota Detalle.aspx" />
@@ -95,15 +100,59 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
+    <Compile Include="Vistas\Admin - DetallesCliente.aspx.cs">
+      <DependentUpon>Admin - DetallesCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="source\Historial.cs" />
-    <Compile Include="source\Mascota.cs" />
+    <Compile Include="Vistas\Admin - DetallesCliente.aspx.designer.cs">
+      <DependentUpon>Admin - DetallesCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Admin-AgregarMascota.aspx.cs">
+      <DependentUpon>Admin-AgregarMascota.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Admin-AgregarMascota.aspx.designer.cs">
+      <DependentUpon>Admin-AgregarMascota.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Admin-IndexGestionClientes.aspx.cs">
+      <DependentUpon>Admin-IndexGestionClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Admin-IndexGestionClientes.aspx.designer.cs">
+      <DependentUpon>Admin-IndexGestionClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Admin-ModificarCliente.aspx.cs">
+      <DependentUpon>Admin-ModificarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Admin-ModificarCliente.aspx.designer.cs">
+      <DependentUpon>Admin-ModificarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Admin-ModificarMascota.aspx.cs">
+      <DependentUpon>Admin-ModificarMascota.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Admin-ModificarMascota.aspx.designer.cs">
+      <DependentUpon>Admin-ModificarMascota.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Admin-Sistema.aspx.cs">
+      <DependentUpon>Admin-Sistema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Admin-Sistema.aspx.designer.cs">
+      <DependentUpon>Admin-Sistema.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="source\Administrador.cs" />
     <Compile Include="source\Derivacion.cs" />
-    <Compile Include="source\Cliente.cs" />
+    <Compile Include="source\DerivacionController.cs" />
+    <Compile Include="source\Historial.cs" />
+    <Compile Include="source\HistorialController.cs" />
+    <Compile Include="source\Mascota.cs" />
+    <Compile Include="source\MascotaController.cs" />
     <Compile Include="source\Receta.cs" />
+    <Compile Include="source\RecetaController.cs" />
     <Compile Include="source\Reserva.cs" />
+    <Compile Include="source\ReservaController.cs" />
     <Compile Include="Vistas\Base.aspx.cs">
       <DependentUpon>Base.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

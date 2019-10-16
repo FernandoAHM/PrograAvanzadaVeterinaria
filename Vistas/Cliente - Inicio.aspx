@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
 
-             <%--    HEADER--%>
+        <%--    HEADER--%>
         <div id="header" style="text-align: center; height: 8%; width: 100%">
             <asp:Button ID="inicio" runat="server" Text="Inicio" OnClick="lnkInicio" Style="padding: 1%; width: 15%" />
             <asp:Button ID="clinica" runat="server" Text="Nuestras Clinica" OnClick="lnkClinica" Style="padding: 1%; width: 15%" />
@@ -44,8 +44,27 @@
         <%--    NECK--%>
 
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
         <div id="footer">
             <table style="width: 100%;">
                 <tr>

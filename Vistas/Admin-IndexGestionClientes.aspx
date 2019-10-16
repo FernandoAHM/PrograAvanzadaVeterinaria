@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cliente - Mascota Historial.aspx.cs" Inherits="Cliente.Cliente___Mascota_Historial" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin-IndexGestionClientes.aspx.cs" Inherits="Cliente.Admin_IndexGestionClientes" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%; width: 100%; margin: 0;">
@@ -33,59 +33,46 @@
                 <asp:TableCell Style="width: 80%; background-color: aquamarine">
                     <asp:Image runat="server" AlternateText="Imagen?" ></asp:Image>
                 </asp:TableCell>
-                <asp:TableCell Style="width: 20%">
-                    <asp:Button ID="reservar_hora" runat="server" Text="Reservar Hora" Style="width: 100%; padding: 8px" />
+               <asp:TableCell Style="width: 20%">
+                    <asp:Button ID="btnGestionPersonal" runat="server" Text="Gestión Personal" Style="width: 100%; padding: 8px" />
                     <br />
-                    <asp:Button ID="mi_mascota" runat="server" Text="Mi mascota" Style="width: 100%; padding: 8px" />
+                    <asp:Button ID="btnGestionClientes" runat="server" Text="Gestión clientes" Style="width: 100%; padding: 8px"  OnClick="menu2_Click"/>
+                    <br />
+                    <asp:Button ID="btnSistema" runat="server" Text="Sistema" Style="width: 100%; padding: 8px" onClick="menu3_Click"/>
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
         <hr />
         <%--    NECK--%>
-        <%--    EDITALBE--%>
+
 
         <div id="editable" style="background-color: aqua; height: 58%">
 
-            <asp:Table ID="Table2" runat="server" style="width:70%;margin-left:10%;background-color:yellowgreen;height:100%">
-                <asp:TableRow>
 
-                    <asp:TableCell style="text-align: center;vertical-align:super">
-                    
-              <h2 style="margin-left: 15%">
+            <h2 style="margin-left: 15%">
                 
-                Historial Veterinario <br/>
-                  Nombre Mascota
+                Gestión de Clientes
+
             </h2>
-                        Seleccione atención
-                        <br/>
-                        <asp:DropDownList ID="ddlHistorial" runat="server"/>
-                     
+
+            <p style="margin-left: 10%">
+                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" /><br /><br />
+                <asp:LinkButton ID="lnkAgregarMascota" runat="server" OnClick="lnkAgregarMascotaClick">Agregar Nueva Mascota</asp:LinkButton>
+            </p>
+            <asp:Panel ID="panelResultado" runat="server" visible="true">
+                Resultados de Búsqueda:<br />
+                <asp:Label ID="lbNombre" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="lbRut" runat="server" Text=""></asp:Label><br />
+                <asp:LinkButton ID="lnkDetalleCliente" runat="server" OnClick="lnkDetalleCliente_Click">Ver detalle de cliente</asp:LinkButton><br />
+                <asp:LinkButton ID="lnkEliminarCliente" runat="server">Eliminar usuario</asp:LinkButton><br />
+                <asp:LinkButton ID="lnkModificarCliente" runat="server">Modificar usuario</asp:LinkButton><br />
 
 
-                    </asp:TableCell>
-
-                    <asp:TableCell>
-
-                        <asp:Button ID="Button3" runat="server" Text="Ver historial" OnClick="lnkHistorial" Style="padding: 10%; width: 100%" />
-                        <br />
-                        <asp:Button ID="Button1" runat="server" Text="Ver receta" OnClick="lnkReceta" Style="padding: 10%; width: 100%" />
-                        <br />
-                        <asp:Button ID="Button2" runat="server" Text="Derivacion" OnClick="lnkDerivacion" Style="padding: 10%; width: 100%" />
-                        <br />
-                        <asp:Button ID="Button4" runat="server" Text="Volver" OnClick="lnkInicio" Style="padding: 10%; width: 100%" />
-                        <br />
-                    </asp:TableCell>
-                </asp:TableRow>
-
-
-            </asp:Table>
-
-
-
+            </asp:Panel>
 
         </div>
 
-        <%--    ///EDITALBE--%>
 
         <%--    FOOTER    --%>
         <hr />

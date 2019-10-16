@@ -108,3 +108,11 @@ C:\Users\seb4\Desktop\PrograAvanzadaVeterinaria\obj\Debug\Cliente.csprojAssembly
 C:\Users\seb4\Desktop\PrograAvanzadaVeterinaria\obj\Debug\Cliente.csproj.CopyComplete
 C:\Users\seb4\Desktop\PrograAvanzadaVeterinaria\obj\Debug\Cliente.dll
 C:\Users\seb4\Desktop\PrograAvanzadaVeterinaria\obj\Debug\Cliente.pdb
+C:\Users\seb4\Desktop\PrograAvanzadaVeterinaria\bin\Newtonsoft.Json.dll
+C:\Users\seb4\Desktop\PrograAvanzadaVeterinaria\bin\System.Net.Http.Formatting.dll
+C:\Users\seb4\Desktop\PrograAvanzadaVeterinaria\bin\System.Web.Http.dll
+C:\Users\seb4\Desktop\PrograAvanzadaVeterinaria\bin\System.Web.Http.WebHost.dll
+C:\Users\seb4\Desktop\PrograAvanzadaVeterinaria\bin\Newtonsoft.Json.xml
+C:\Users\seb4\Desktop\PrograAvanzadaVeterinaria\bin\System.Net.Http.Formatting.xml
+C:\Users\seb4\Desktop\PrograAvanzadaVeterinaria\bin\System.Web.Http.xml
+C:\Users\seb4\Desktop\PrograAvanzadaVeterinaria\bin\System.Web.Http.WebHost.xml

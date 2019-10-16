@@ -53,13 +53,17 @@
                 Mis mascotas
 
             </h2>
+            <asp:Label ID="titulo" runat="server" Text="" style="margin-left: 10%">
 
-            <p style="margin-left: 10%">
 
-                Seleccione su Mascota
+            </asp:Label>
+          <br/>
+       
+             <asp:DropDownList ID="ddlMascota" runat="server" style="margin-left: 10%">
+            </asp:DropDownList>
+            <asp:Button ID="continuar" runat="server" Text="Continuar" OnClick="lnkContinuar" Style="width: 10%; padding: 8px;margin-left: 10%"/>
 
-            </p>
-         AQUI VA LA LIST VIEW O EL WIDGET QUE SEA CONVENIENTE EN AL PROGRAMACION
+           
         </div>
 
 

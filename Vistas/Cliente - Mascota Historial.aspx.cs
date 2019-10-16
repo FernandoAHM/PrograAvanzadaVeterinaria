@@ -4,14 +4,35 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Cliente.source;
 
 namespace Cliente
 {
     public partial class Cliente___Mascota_Historial : System.Web.UI.Page
     {
+        private int nro;
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            int nro = Int32.Parse(Request.QueryString["id"].ToString());
+            HistorialController.crearHistorial();
+            cargarDatos(nro);
+        }
+
+        private void cargarDatos(int nro)
+        {
+            var lMascota = from m in HistorialController.getHistorial()
+                           select new
+                           {
+                               NOMBRE = m.Id + "(" + m.Obs + ")",
+                               ID = m.Id
+                           };
+
+
+            ddlHistorial.DataSource = lMascota;
+            ddlHistorial.DataTextField = "NOMBRE";
+            ddlHistorial.DataValueField = "ID";
+            ddlHistorial.DataBind();
         }
 
 

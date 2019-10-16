@@ -47,25 +47,23 @@
 
         <div id="editable" style="background-color: aqua; height: 58%">
 
-            <asp:Table ID="Table2" runat="server" style="width:70%;margin-left:10%;background-color:yellowgreen">
+            <asp:Table ID="Table2" runat="server" Style="width: 70%; margin-left: 10%; background-color: yellowgreen">
                 <asp:TableRow>
 
-                    <asp:TableCell style="text-align: start;vertical-align:super">
-                    
-              <h2 style="margin-left: 15%">
-                
-                Mascota #NOMBRE MASCOTA#
+                    <asp:TableCell Style="text-align: start; vertical-align: super">
 
-            </h2>
-
-            <p style="margin-left: 10%">
-
-                edad
-                sexo
-                etc 
                 
 
-            </p>
+                        <asp:Label ID="nombre" runat="server" Style="margin-left: 10%;font-size:30px" /> <br/>
+                        <asp:Label ID="especie" runat="server" Style="margin-left: 10%" /><br/>
+                        <asp:Label ID="id" runat="server" Style="margin-left: 10%" /><br/>
+                        <asp:Label ID="sexo" runat="server" Style="margin-left: 10%" /><br/>
+                        <asp:Label ID="fecha_nac" runat="server" Style="margin-left: 10%" /><br/>
+                        <asp:Label ID="esterilizado" runat="server" Style="margin-left: 10%" /><br/>
+                        <asp:Label ID="nro_chip" runat="server" Style="margin-left: 10%" /><br/>
+
+
+
                     </asp:TableCell>
 
                     <asp:TableCell>

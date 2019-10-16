@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cliente - Mascota Historial.aspx.cs" Inherits="Cliente.Cliente___Mascota_Historial" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin-Sistema.aspx.cs" Inherits="Cliente.Admin_Sistema" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%; width: 100%; margin: 0;">
 <head runat="server">
@@ -34,58 +33,58 @@
                     <asp:Image runat="server" AlternateText="Imagen?" ></asp:Image>
                 </asp:TableCell>
                 <asp:TableCell Style="width: 20%">
-                    <asp:Button ID="reservar_hora" runat="server" Text="Reservar Hora" Style="width: 100%; padding: 8px" />
+                    <asp:Button ID="btnGestionPersonal" runat="server" Text="Gestión Personal" Style="width: 100%; padding: 8px" />
                     <br />
-                    <asp:Button ID="mi_mascota" runat="server" Text="Mi mascota" Style="width: 100%; padding: 8px" />
+                    <asp:Button ID="btnGestionClientes" runat="server" Text="Gestión clientes" Style="width: 100%; padding: 8px"  OnClick="menu2_Click"/>
+                    <br />
+                    <asp:Button ID="btnSistema" runat="server" Text="Sistema" Style="width: 100%; padding: 8px" onClick="menu3_Click"/>
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
         <hr />
         <%--    NECK--%>
-        <%--    EDITALBE--%>
+
 
         <div id="editable" style="background-color: aqua; height: 58%">
 
-            <asp:Table ID="Table2" runat="server" style="width:70%;margin-left:10%;background-color:yellowgreen;height:100%">
-                <asp:TableRow>
 
-                    <asp:TableCell style="text-align: center;vertical-align:super">
-                    
-              <h2 style="margin-left: 15%">
+            <h2 style="margin-left: 15%">
                 
-                Historial Veterinario <br/>
-                  Nombre Mascota
+                Gestión de Sistema
+
             </h2>
-                        Seleccione atención
-                        <br/>
-                        <asp:DropDownList ID="ddlHistorial" runat="server"/>
-                     
 
-
-                    </asp:TableCell>
-
-                    <asp:TableCell>
-
-                        <asp:Button ID="Button3" runat="server" Text="Ver historial" OnClick="lnkHistorial" Style="padding: 10%; width: 100%" />
-                        <br />
-                        <asp:Button ID="Button1" runat="server" Text="Ver receta" OnClick="lnkReceta" Style="padding: 10%; width: 100%" />
-                        <br />
-                        <asp:Button ID="Button2" runat="server" Text="Derivacion" OnClick="lnkDerivacion" Style="padding: 10%; width: 100%" />
-                        <br />
-                        <asp:Button ID="Button4" runat="server" Text="Volver" OnClick="lnkInicio" Style="padding: 10%; width: 100%" />
-                        <br />
-                    </asp:TableCell>
-                </asp:TableRow>
-
-
-            </asp:Table>
-
-
-
-
+            <p style="margin-left: 10%">
+                <b>Especies:</b><br />
+                <asp:ListBox ID="listaEspecies" runat="server" Width="200" OnSelectedIndexChanged="listaEspecies_ItemSeleccionado">
+                    <asp:ListItem>Especies</asp:ListItem>
+                    <asp:ListItem>Canino</asp:ListItem>
+                    <asp:ListItem>Felino</asp:ListItem>
+                    <asp:ListItem>Ave</asp:ListItem>
+                    <asp:ListItem>Pez</asp:ListItem>
+                </asp:ListBox><br />
+                <asp:TextBox ID="txtEspecie" runat="server" Visible="true"></asp:TextBox>
+                <br />
+                <asp:Button ID="btnAdd" runat="server" Text="Agregar" OnClick="btnAdd_Click" /> 
+                <asp:Button ID="btnDel" runat="server" Text="Eliminar" OnClick="btnDel_Click" />
+                <asp:Button ID="btnModif" runat="server" Text="Modificar" OnClick="btnModif_Click" /><br /><br />
+                <b>Razas</b><br />
+                <asp:ListBox ID="listaRazas" runat="server" width="200">
+                    <asp:ListItem>Razas</asp:ListItem>
+                    <asp:ListItem>Maine Coon</asp:ListItem>
+                    <asp:ListItem>Rag-doll</asp:ListItem>
+                    <asp:ListItem>Mestizo</asp:ListItem>
+                    <asp:ListItem>Siamés</asp:ListItem>
+                </asp:ListBox><br />
+                <asp:TextBox ID="txtRaza" runat="server" Visible="true"></asp:TextBox>
+                <br />
+                <asp:Button ID="btnAdd2" runat="server" Text="Agregar" OnClick="btnAdd2_Click" /> 
+                <asp:Button ID="btnDel2" runat="server" Text="Eliminar" OnClick="btnDel2_Click" />
+                <asp:Button ID="btnModif2" runat="server" Text="Modificar" OnClick="btnModif2_Click" />
+                
+            </p>
         </div>
 
-        <%--    ///EDITALBE--%>
 
         <%--    FOOTER    --%>
         <hr />
@@ -106,3 +105,5 @@
 
 </body>
 </html>
+
+
