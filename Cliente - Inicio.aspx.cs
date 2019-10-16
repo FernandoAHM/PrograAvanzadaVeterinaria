@@ -15,22 +15,68 @@ namespace Cliente
         }
 
 
-        // Inicio PLANTILLA
-        protected void lnkReserva_Hora(object sender, EventArgs e)
-        {
-            Response.Redirect("Cliente - Reserva Nueva.aspx");
-        }
 
+
+
+
+
+
+        //BOTONES PLANTILLA---------------------------------------------------
         protected void lnkInicio(object sender, EventArgs e)
         {
             Response.Redirect("Cliente - Inicio.aspx");
         }
-        protected void lnkMi_mmascota(object sender, EventArgs e)
+
+        //               EDITAR!
+        protected void lnkClinica(object sender, EventArgs e)
+        {
+            Response.Redirect("");
+        }
+
+        //               EDITAR!
+        protected void lnkServicios(object sender, EventArgs e)
+        {
+            Response.Redirect("");
+        }
+
+        //               EDITAR!
+        protected void lnkEspecialidades(object sender, EventArgs e)
+        {
+            Response.Redirect("");
+        }
+
+        //               EDITAR!
+        protected void lnkContacto(object sender, EventArgs e)
+        {
+            Response.Redirect("");
+        }
+
+        protected void lnkReservar_hora(object sender, EventArgs e)
+        {
+            Response.Redirect("Cliente - Reservas Visualizacion.aspx");
+        }
+
+        protected void lnkMi_mascota(object sender, EventArgs e)
         {
             Response.Redirect("Cliente - Mascota Listado.aspx");
         }
 
-        // FIN  PLANTILLA
+        protected void lnkFacebook(object sender, EventArgs e)
+        {
+            Response.Redirect("http://www.facebook.com/");
+        }
+
+        protected void lnkTwitter(object sender, EventArgs e)
+        {
+            Response.Redirect("http://www.twitter.com/");
+        }
+
+        protected void lnkInstagram(object sender, EventArgs e)
+        {
+            Response.Redirect("http://www.instagram.com/");
+        }
+
+
 
     }
 }

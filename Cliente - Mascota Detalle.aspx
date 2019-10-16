@@ -54,24 +54,27 @@
                     
               <h2 style="margin-left: 15%">
                 
-                M
+                Mascota #NOMBRE MASCOTA#
 
             </h2>
 
             <p style="margin-left: 10%">
 
-                Seleccione su Mascota
+                edad
+                sexo
+                etc 
+                
 
             </p>
                     </asp:TableCell>
 
                     <asp:TableCell>
 
-                        <asp:Button ID="Button3" runat="server" Text="Ver historial" Style="padding: 10%; width: 100%" />
+                        <asp:Button ID="Button3" runat="server" Text="Ver historial" OnClick="lnkHistorial" Style="padding: 10%; width: 100%" />
                         <br />
-                        <asp:Button ID="Button1" runat="server" Text="Ver receta" Style="padding: 10%; width: 100%" />
+                        <asp:Button ID="Button1" runat="server" Text="Ver receta" OnClick="lnkReceta" Style="padding: 10%; width: 100%" />
                         <br />
-                        <asp:Button ID="Button2" runat="server" Text="Derivacion" Style="padding: 10%; width: 100%" />
+                        <asp:Button ID="Button2" runat="server" Text="Derivacion" OnClick="lnkDerivacion" Style="padding: 10%; width: 100%" />
                         <br />
                     </asp:TableCell>
                 </asp:TableRow>

@@ -65,8 +65,8 @@
             </asp:Table>
             <br/>
             <div style="margin-left: 20%">
-                   <asp:Button ID="Button1" runat="server" Text="Cancelar" Style="padding: 1%; width: 15%" />
-            <asp:Button ID="Button2" runat="server" Text="Continuar" Style="padding: 1%; width: 15%" />
+                   <asp:Button ID="cancelar" runat="server" Text="Cancelar" OnClick="lnkInicio" Style="padding: 1%; width: 15%" />
+            <asp:Button ID="continuar" runat="server" Text="Continuar" OnClick="lnkConfirmacion_Hora" Style="padding: 1%; width: 15%" />
             </div>
          
         </div>

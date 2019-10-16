@@ -10,13 +10,16 @@
     <form id="form1" runat="server" style="height: 100%; width: 100%; margin: 0;">
 
 
+  
+
+   
         <%--    HEADER--%>
         <div id="header" style="text-align: center; height: 8%; width: 100%">
-            <asp:Button ID="inicio" runat="server" Text="Inicio" Style="padding: 1%; width: 15%" />
-            <asp:Button ID="clinica" runat="server" Text="Nuestras Clinica" Style="padding: 1%; width: 15%" />
-            <asp:Button ID="servicio" runat="server" Text="Servicio" Style="padding: 1%; width: 15%" />
-            <asp:Button ID="especialidades" runat="server" Text="Especialidades veterinarias" Style="padding: 1%; width: 15%" />
-            <asp:Button ID="contacto" runat="server" Text="Contacto" Style="padding: 1%; width: 15%" />
+            <asp:Button ID="inicio" runat="server" Text="Inicio" OnClick="lnkInicio" Style="padding: 1%; width: 15%" />
+            <asp:Button ID="clinica" runat="server" Text="Nuestras Clinica" OnClick="lnkClinica" Style="padding: 1%; width: 15%" />
+            <asp:Button ID="servicio" runat="server" Text="Servicio" OnClick="lnkServicios" Style="padding: 1%; width: 15%" />
+            <asp:Button ID="especialidades" runat="server" Text="Especialidades veterinarias" OnClick="lnkEspecialidades" Style="padding: 1%; width: 15%" />
+            <asp:Button ID="contacto" runat="server" Text="Contacto" OnClick="lnkContacto" Style="padding: 1%; width: 15%" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/icons/user.png" Style="height: 40%; width: 2%" />
             <%--ver el TEXTO para mostar user_name --%> 
@@ -25,23 +28,24 @@
             &nbsp;&nbsp;&nbsp;
             <asp:ImageButton ID="ImageButton5" runat="server" ImageUrl="~/icons/logout.png" Style="height: 40%; width: 2%" />
         </div>
-        <%--    HEADER--%>
+        <%--  FIN  HEADER--%>
         <%--    NECK--%>
         <hr />
         <asp:Table ID="Table1" runat="server" Style="width: 100%; height: 8%">
             <asp:TableRow>
                 <asp:TableCell Style="width: 80%; background-color: aquamarine">
-                    <asp:Image runat="server" AlternateText="Imagen" ></asp:Image>
+                    <asp:Image runat="server" AlternateText="Imagen?" ></asp:Image>
                 </asp:TableCell>
                 <asp:TableCell Style="width: 20%">
-                    <asp:Button ID="reservar_hora" runat="server" Text="Reservar Hora" Style="width: 100%; padding: 8px" />
+                    <asp:Button ID="reservar_hora" runat="server" Text="Reservar Hora" OnClick="lnkReservar_hora" Style="width: 100%; padding: 8px" />
                     <br />
-                    <asp:Button ID="mi_mascota" runat="server" Text="Mi mascota" Style="width: 100%; padding: 8px" />
+                    <asp:Button ID="mi_mascota" runat="server" Text="Mi mascota" OnClick="lnkMi_mascota" Style="width: 100%; padding: 8px" />
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
         <hr />
-        <%-- //   NECK--%>
+        <%-- FIN   NECK--%>
+
         <%--   EDITABLE--%>
         <div id="editable" style="background-color: aqua; height: 58%; width: 100%;">
             <h2 style="margin-left: 15%">Nueva reserva de hora</h2>
@@ -88,10 +92,10 @@
                     </asp:TableCell>
 
                     <asp:TableCell Style="width: 10%; text-align: center;">
-                        <asp:Button ID="Button1" runat="server" Text="Continuar" Style="padding: 5%; width: 100%" />
+                        <asp:Button ID="continuar" runat="server" Text="Continuar" OnClick="lnkPago_Reserva" Style="padding: 5%; width: 100%" />
                         <br />
                         <hr />
-                        <asp:Button ID="Button2" runat="server" Text="Cancelar" Style="padding: 5%; width: 100%" />
+                        <asp:Button ID="cancelar" runat="server" Text="Cancelar" Style="padding: 5%; width: 100%" />
 
                     </asp:TableCell>
 

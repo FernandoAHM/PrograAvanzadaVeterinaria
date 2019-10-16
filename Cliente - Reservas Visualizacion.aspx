@@ -48,7 +48,7 @@
             <h2 style="margin-left:15%">Reserva de hora</h2>
             <p style="margin-left:5%">Usted no tiene reservas</p>
             <br/>
-            <asp:Button ID="btn_nueva_reserva" runat="server" Text="Crear nueva reserva" style="margin-left:10%"/>
+            <asp:Button ID="btn_nueva_reserva" runat="server" Text="Crear nueva reserva" OnClick="lnkNueva_Reserva" style="margin-left:10%;padding: 1%; width: 15%" />
 
         </div>
 

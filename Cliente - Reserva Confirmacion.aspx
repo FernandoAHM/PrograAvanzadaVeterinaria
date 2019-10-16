@@ -49,6 +49,7 @@
 
                         <h2 style="margin-left: 15%"> Confirmación de reserva de hora</h2>
             <p style="margin-left: 10%">Su reservar de Especialidad el dia xx a las xx horas ha sido agendada </p>
+            <asp:Button ID="volver" runat="server" Text="Volver a inicio" OnClick="lnkInicio"  style="margin-left:10%;padding: 1%; width: 15%" />
         </div> 
         
   

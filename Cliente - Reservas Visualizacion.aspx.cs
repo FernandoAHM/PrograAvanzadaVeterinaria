@@ -13,5 +13,10 @@ namespace Cliente
         {
 
         }
+
+        protected void lnkNueva_Reserva(object sender, EventArgs e)
+        {
+            Response.Redirect("Cliente - Reserva Nueva.aspx");
+        }
     }
 }

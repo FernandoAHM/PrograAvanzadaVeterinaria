@@ -12,7 +12,7 @@
 
         <%--    HEADER--%>
         <div id="header" style="text-align: center; height: 8%; width: 100%">
-            <asp:Button ID="inicio" runat="server" Text="Inicio" OnClick="lnk_Inicio" Style="padding: 1%; width: 15%" />
+            <asp:Button ID="inicio" runat="server" Text="Inicio" OnClick="lnkInicio" Style="padding: 1%; width: 15%" />
             <asp:Button ID="clinica" runat="server" Text="Nuestras Clinica" OnClick="lnkClinica" Style="padding: 1%; width: 15%" />
             <asp:Button ID="servicio" runat="server" Text="Servicio" OnClick="lnkServicios" Style="padding: 1%; width: 15%" />
             <asp:Button ID="especialidades" runat="server" Text="Especialidades veterinarias" OnClick="lnkEspecialidades" Style="padding: 1%; width: 15%" />
@@ -25,7 +25,7 @@
             &nbsp;&nbsp;&nbsp;
             <asp:ImageButton ID="ImageButton5" runat="server" ImageUrl="~/icons/logout.png" Style="height: 40%; width: 2%" />
         </div>
-        <%--    HEADER--%>
+        <%--  FIN  HEADER--%>
         <%--    NECK--%>
         <hr />
         <asp:Table ID="Table1" runat="server" Style="width: 100%; height: 8%">
@@ -41,7 +41,7 @@
             </asp:TableRow>
         </asp:Table>
         <hr />
-        <%--    NECK--%>
+        <%-- FIN   NECK--%>
 
 
         <div id="editable" style="background-color: aqua; height: 58%">
